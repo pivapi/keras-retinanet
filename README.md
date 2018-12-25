@@ -14,15 +14,16 @@ by Tsung-Yi Lin, Priya Goyal, Ross Girshick, Kaiming He and Piotr Dollár.
 4) Alternatively, you can run the code directly from the cloned  repository, however you need to run `python setup.py build_ext --inplace` to compile Cython code first.
 5) Optionally, install `pycocotools` if you want to train / test on the MS COCO dataset by running `pip install --user git+https://github.com/cocodataset/cocoapi.git#subdirectory=PythonAPI`.
 
+---
+**Testing能够正常运行，平台：2070，虚拟环境RETINA**
+---
 ## Testing
 An example of testing the network can be seen in [this Notebook](https://github.com/delftrobotics/keras-retinanet/blob/master/examples/ResNet50RetinaNet.ipynb).
 In general, inference of the network works as follows:
 ```python
 boxes, scores, labels = model.predict_on_batch(inputs)
 ```
----
-**能够正常运行，平台：2070，虚拟环境RETINA**
----
+
 
 Where `boxes` are shaped `(None, None, 4)` (for `(x1, y1, x2, y2)`), scores is shaped `(None, None)` (classification score) and labels is shaped `(None, None)` (label corresponding to the score). In all three outputs, the first dimension represents the shape and the second dimension indexes the list of detections.
 
@@ -72,7 +73,9 @@ keras_retinanet/bin/train.py pascal /path/to/VOCdevkit/VOC2007
 # Using the installed script:
 retinanet-train pascal /path/to/VOCdevkit/VOC2007
 ```
-
+---
+**在COCO2017数据集上训练正常，平台：2070，虚拟环境RETINA**
+---
 For training on [MS COCO](http://cocodataset.org/#home), run:
 ```shell
 # Running directly from the repository:
@@ -81,9 +84,7 @@ keras_retinanet/bin/train.py coco /path/to/MS/COCO
 # Using the installed script:
 retinanet-train coco /path/to/MS/COCO
 ```
----
-**在COCO2017数据集上训练正常，平台：2070，虚拟环境RETINA**
----
+
 The pretrained MS COCO model can be downloaded [here](https://github.com/fizyr/keras-retinanet/releases). Results using the `cocoapi` are shown below (note: according to the paper, this configuration should achieve a mAP of 0.357).
 
 ```
