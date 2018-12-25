@@ -74,7 +74,7 @@ keras_retinanet/bin/train.py pascal /path/to/VOCdevkit/VOC2007
 retinanet-train pascal /path/to/VOCdevkit/VOC2007
 ```
 ---
-**在COCO2017数据集上训练正常，平台：2070，虚拟环境RETINA**
+**在COCO2017数据集上训练正常，平台：2070，虚拟环境RETINA--[任务1]**
 ---
 For training on [MS COCO](http://cocodataset.org/#home), run:
 ```shell
