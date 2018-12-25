@@ -21,7 +21,8 @@ In general, inference of the network works as follows:
 boxes, scores, labels = model.predict_on_batch(inputs)
 ```
 ---
-**能够正常运行**
+**能够正常运行，平台：2070，虚拟环境RETINA**
+---
 
 Where `boxes` are shaped `(None, None, 4)` (for `(x1, y1, x2, y2)`), scores is shaped `(None, None)` (classification score) and labels is shaped `(None, None)` (label corresponding to the score). In all three outputs, the first dimension represents the shape and the second dimension indexes the list of detections.
 
@@ -80,7 +81,9 @@ keras_retinanet/bin/train.py coco /path/to/MS/COCO
 # Using the installed script:
 retinanet-train coco /path/to/MS/COCO
 ```
-
+---
+**在COCO2017数据集上训练正常，平台：2070，虚拟环境RETINA**
+---
 The pretrained MS COCO model can be downloaded [here](https://github.com/fizyr/keras-retinanet/releases). Results using the `cocoapi` are shown below (note: according to the paper, this configuration should achieve a mAP of 0.357).
 
 ```
