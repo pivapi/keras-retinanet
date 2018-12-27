@@ -77,7 +77,7 @@ retinanet-train pascal /path/to/VOCdevkit/VOC2007
 **在COCO2017数据集上训练正常，平台：2070，虚拟环境RETINA--[任务1]**
 
 - 直接在Terminal中调用，在pycharm里面报错，其实就是只能用installed script
-- 用预训练模型训练后，mAP=0.334
+- 用预训练模型训练1epoch后，mAP=0.334，training from scratch太耗时间。
 ---
 For training on [MS COCO](http://cocodataset.org/#home), run:
 ```shell
